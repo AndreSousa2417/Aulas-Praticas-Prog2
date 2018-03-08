@@ -173,14 +173,15 @@ void QuickSort_A(vetor *vec, int left, int right)
 
       while(1)
       {
-        while (vec->elementos[i].area  <= vec->elementos[right].area && i<right)i++;
-        while (vec->elementos[right].area <= vec->elementos[j].area && j >= 0) j--;
+        while ((vec->elementos[i].area  < vec->elementos[right].area || (vec->elementos[i].area = vec->elementos[right].area && vec->elementos[i].populacao < vec->elementos[right].populacao)) && i<right )i++;
+        while ((vec->elementos[right].area < vec->elementos[j].area || ( vec->elementos[right].area = vec->elementos[j].area && vec->elementos[right].populacao < vec->elementos[j].populacao)) && j >= 0) j--;
 
-        if()
+        
         if( i < j )
         {
           aux = vec->elementos[i]; 
           vec->elementos[i] = vec->elementos[j];
+
           vec->elementos[j] = aux;
         }
 
